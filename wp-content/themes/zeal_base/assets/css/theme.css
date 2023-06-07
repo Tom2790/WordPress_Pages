@@ -1,0 +1,294 @@
+body{
+    font-family: "Montserrat", serif;
+    background: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+footer {
+    background: #cc002b;
+    color: #fff;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+footer a,footer a:hover {
+    color: #fff;
+}
+
+.footer-nav a {
+    color: #fff !important;
+}
+
+.footer-nav ul li {
+    padding: 5px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 20px;
+}
+
+.separator {
+    height: 3px;
+    width: 100px;
+    background: #cc002b;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.shadow {
+    box-shadow: 0 15px 15px #ccc;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 96px;
+    background: #fff;
+    box-shadow: 0 0 15px #ccc;
+}
+
+.site-header a {
+    color: #4d4d4d;
+    transition: 300ms;
+}
+
+.site-header .header-socials a {
+    color: #000;
+}
+
+.site-header .menu-item {
+    position: relative;
+}
+
+.site-header .menu-item:before {
+    content: '';
+    display: block;
+    width: 0px;
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background: #cc002b;
+    transition: 300ms;
+    transform: translate(-50%);
+    left: 50%;
+}
+
+.site-header #menu-main .menu-item:hover a {
+    color: #000;
+    text-decoration: none;
+}
+
+.site-branding {
+    background: #fff;
+    margin-right: 20px;
+}
+
+.site-branding img {
+    height: 65px;
+    width: auto;
+}
+
+nav.site-navigation .menu .current-menu-item a {
+    /*font-weight: 600;*/
+    /*color: #005da8;*/
+}
+
+nav.site-navigation .menu {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.navigation-control {
+    height: 48px;
+    width: 48px;
+    background: #000;
+    position: relative;
+}
+
+.extra-menu ul.menu li {
+    background: #cc002b;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 29px;
+}
+
+.extra-menu ul.menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    gap: 10px;
+}
+
+.extra-menu {
+    margin-left: auto;
+}
+
+.extra-menu ul.menu li a {
+    color: #fff;
+    font-size: 12px;
+}
+
+.navigation-control.controll-close:after,
+.navigation-control.controll-close:before,
+.navigation-control.controll-open>span,
+.navigation-control.controll-open:after,
+.navigation-control.controll-open:before
+{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%)
+}
+
+.navigation-control.controll-open:before {
+    transform: translate(-50%, -7px);
+}
+
+.navigation-control.controll-open:after
+{
+    transform: translate(-50%, 7px);
+}
+
+.navigation-control.controll-close:before {
+    transform: translate(-50%) rotate(-45deg);
+}
+
+.navigation-control.controll-close:after {
+    transform: translate(-50%) rotate(45deg);
+}
+
+.site-header .header-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.pricing-item {
+    box-shadow: 0 0 20px #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.vc_pageable-slide-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+
+    .site-header #menu-main .menu-item:hover:before {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-fluid {
+        padding-left: 56px;
+        padding-right: 56px;
+    }
+
+    .text-line:after{
+        top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .usp-wrapper {
+        width: 70%;
+        height: 350px;
+    }
+
+    .section-static-1 {
+        background-image: url(/wp-content/themes/jasielska_As4you/assets/images/people-1.png);
+        background-size: 85%;
+        background-position: top left;
+        background-repeat: no-repeat;
+        min-height: 880px;
+    }
+
+    .section-static-2 {
+        background-image: url(/wp-content/themes/jasielska_As4you/assets/images/developer-1.png);
+        background-size: 55%;
+        background-position: top left;
+        background-repeat: no-repeat;
+    }
+
+    .section-form .text-title {
+        font-size: 40px;
+    }
+
+    #gallery-2 {
+        margin-top: -43px;
+        position: relative;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .site-header {
+        height: 48px;
+        justify-content: flex-start;
+        padding-top: 0;
+        gap: 20px;
+    }
+
+    .site-header .site-branding img {
+        height: 32px;
+        width: auto;
+    }
+
+    .site-branding {
+        width: 60px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .site-header nav.site-navigation {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 100vw;
+        background: #fff;
+        padding: 0 20px;
+        transition: 300ms;
+        z-index: 9;
+    }
+
+    .site-header nav.site-navigation.show {
+        left: 0;
+    }
+
+    .site-header nav.site-navigation .menu{
+        flex-direction: column;
+        margin: 50px 0rem;
+    }
+
+    .extra-menu ul.menu {
+        margin-top: 0 !important;
+        align-items: start;
+    }
+
+}

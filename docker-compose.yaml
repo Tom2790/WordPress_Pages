@@ -1,0 +1,41 @@
+version: '3.1'
+
+services:
+
+  wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 8000:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wpplugin
+      WORDPRESS_DB_PASSWORD: wpplugin
+      WORDPRESS_DB_NAME: wpplugin
+      UPLOAD_LIMIT: 64M
+      upload_max_filesize : 64M
+      post_max_size : 64M
+      memory_limit : 64M
+
+    volumes:
+      - ./:/var/www/html
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+
+  db:
+    image: mariadb:10.5.8
+    restart: always
+    environment:
+      MYSQL_DATABASE: wpplugin
+      MYSQL_USER: wpplugin
+      MYSQL_PASSWORD: wpplugin
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    ports:
+      - 8081:80
+volumes:
+  wordpress:
+  db:
